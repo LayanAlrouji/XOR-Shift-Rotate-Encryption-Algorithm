@@ -54,6 +54,74 @@ Code:
 
 ## 🖥️ Phase 3: Display the plain text, Encrypt your name, Display the cipher text.
 
+Code: 
+
+
+public class MessageEncryptor {
+    // 1- Convert PlainText to binary:
+    public static String toBinary(String plainText) {
+        StringBuilder binaryMessage = new StringBuilder();
+        for (char c : plainText.toCharArray()) {
+            for (int i = 7; i >= 0; i--) {
+                binaryMessage.append((c >> i) & 1); // Append each bit to the binary string
+            }
+        }
+        return binaryMessage.toString();
+    }
+
+
+    // 2- Shifting:
+    public static String shifting(String binaryMessage, int shiftValue) {
+        return binaryMessage.substring(shiftValue) + binaryMessage.substring(0, shiftValue);
+    }
+
+    
+    // 3- XOR:
+    public static String xoring(String binaryMessage, String key) {
+        StringBuilder xored = new StringBuilder();
+        for (int i = 0; i < binaryMessage.length(); i++) {
+            // Convert the key character to binary
+            char keyChar = key.charAt(i % key.length());
+            String keyBit = String.format("%8s", Integer.toBinaryString(keyChar)).replace(' ', '0');
+            char xoredBit = (binaryMessage.charAt(i) == keyBit.charAt(i % 8)) ? '0' : '1';
+            xored.append(xoredBit);
+        }
+        return xored.toString();
+    }
+
+
+    // 4- Rotate:
+    public static String rotateing(String binaryMessage, int placement) {
+        int messageLength = binaryMessage.length();
+        placement = placement % messageLength;
+        return binaryMessage.substring(messageLength - placement) + binaryMessage.substring(0, messageLength - placement);
+    }
+
+
+
+// ---------------------- Main method ------------------------
+
+   // Input the plaintext message:
+        System.out.print("Enter a message: ");
+        String plaintext = scanner.nextLine();
+        
+   // Input the key:
+        System.out.print("Enter a STRING key: ");
+        String key = scanner.nextLine();
+
+   // Convert plaintext to binary:
+        String binaryMessage = toBinary(plaintext);
+        System.out.println("Binary message: " + binaryMessage);
+
+   // Apply the encryption process (Shift -> XOR -> Rotate):
+        String shifted = shifting(binaryMessage, 2);
+        System.out.println("Shifted message: " + shifted);
+
+        String xored = xoring(shifted, key);
+        System.out.println("XORED message: " + xored);
+
+        String encrypted = rotateing(xored, 2);
+        System.out.println("The encrypted message: " + encrypted);
 
 ---
 
