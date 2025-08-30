@@ -35,7 +35,7 @@ This enables users to select their preferred key.
 
 Code:
 
-```java
+
         // Convert the key character to binary
 
         
