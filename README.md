@@ -186,3 +186,46 @@ Code:
 
 ## 🔓 Phase 5: Decrypt the cipher text to get the plaintext.
 
+Code:
+
+
+// Decrypt method:
+
+    
+    public static String decrypt(String encryptedMessage, String key, int shiftValue) {
+        String rotatedBack = rotateing(encryptedMessage, encryptedMessage.length() - shiftValue);
+        String xoredBack = xoring(rotatedBack, key);
+        String shiftedBack = shifting(xoredBack, xoredBack.length() - shiftValue);
+        return fromBinary(shiftedBack);
+    }
+    
+    
+    // Convert Decrypted message from binary to string:
+    
+    
+    public static String fromBinary(String binaryMessage) {
+        StringBuilder decryptedMessage = new StringBuilder();
+        for (int i = 0; i < binaryMessage.length(); i += 8) {
+            if (i + 8 > binaryMessage.length()) {
+                break; // Prevent IndexOutOfBoundsException
+            }
+            String byteString = binaryMessage.substring(i, i + 8);
+            decryptedMessage.append((char) Integer.parseInt(byteString, 2));
+        }
+        return decryptedMessage.toString();
+    }
+
+
+
+         
+// ---------------------- Main method ------------------------
+
+  // Decrypt the message:
+
+  
+        String decrypted = decrypt(encrypted, key, 2);
+        System.out.println("Decrypted message: " + decrypted);
+
+
+  
+
