@@ -58,7 +58,10 @@ Code:
 
 
 Output example:
-Enter a STRING key: .....
+
+
+<img width="726" height="292" alt="image" src="https://github.com/user-attachments/assets/a77a2258-3846-49ba-9c71-fcf258bb2ee5" />
+
 
 
 ---
@@ -149,6 +152,20 @@ public class MessageEncryptor {
         String encrypted = rotateing(xored, 2);
         System.out.println("The encrypted message: " + encrypted);
 
+
+
+
+
+
+Output example:
+
+
+<img width="1106" height="306" alt="image" src="https://github.com/user-attachments/assets/45d3306a-ce50-4fc5-89ae-1e2a60e58f38" />
+
+
+
+
+
 ---
 
 ## ⛓️ Phase 4: Apply hash function to achieve integrity.
@@ -190,6 +207,20 @@ Code:
   
         String sha1Hash = HashGenerator.generateHash(plaintext);
         System.out.println("SHA-1 hash of plaintext: " + sha1Hash);
+
+
+
+
+
+
+
+Output example:
+
+
+<img width="1106" height="44" alt="image" src="https://github.com/user-attachments/assets/1bc4011b-5a9c-46a8-9758-3b8ddee1cb17" />
+
+
+
 
 
 
@@ -236,6 +267,22 @@ Code:
   
         String decrypted = decrypt(encrypted, key, 2);
         System.out.println("Decrypted message: " + decrypted);
+
+
+
+
+
+
+
+
+Output example:
+
+
+<img width="1106" height="46" alt="image" src="https://github.com/user-attachments/assets/2628f2c3-1fbb-4deb-b88c-d712bf4d8b9e" />
+
+
+
+
 
 
 
