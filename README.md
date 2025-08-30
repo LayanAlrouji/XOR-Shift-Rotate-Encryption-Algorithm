@@ -54,7 +54,13 @@ Code:
         String key = scanner.nextLine();
 
 
-         
+
+
+
+Output example:
+Enter a STRING key: .....
+
+
 ---
 
 ## 🖥️ Phase 3: Display the plain text, Encrypt your name, Display the cipher text.
