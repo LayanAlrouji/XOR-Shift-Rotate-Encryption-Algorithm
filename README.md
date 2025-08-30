@@ -2,7 +2,7 @@
 ---
 
 ## 📘 Project Overview
-implement new Encryption Algorithm bit oriented and apply integrity using hash function, apply the method using JAVA Language
+implement new Encryption Algorithm bit oriented and apply integrity using hash function, apply the method using JAVA Language.
 
 ---
 
@@ -10,9 +10,12 @@ implement new Encryption Algorithm bit oriented and apply integrity using hash f
 
 We create new algorithm called ( XORShiftRotate ) which combines three algorithms shift, XOR, and rotation.  it’s provide a fundamental yet efficient way to encrypt and decrypt data.  These methods are not only easy to implement and understand but they also provide more secure and protect data from risks compared to other algorithms.
 
+Block diagram:
 <img width="468" height="201" alt="image" src="https://github.com/user-attachments/assets/c9c4a6a3-9925-4ead-80e2-5f54bde8ee15" />
 
 
+
+Flow chart:
 <img width="425" height="405" alt="image" src="https://github.com/user-attachments/assets/ba24b4fc-825e-4059-bd6a-9024290725c3" />
 
 
