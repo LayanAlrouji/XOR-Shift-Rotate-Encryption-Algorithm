@@ -35,7 +35,7 @@ This enables users to select their preferred key.
 
 Code:
 
-
+```java
         // Convert the key character to binary
 
         
@@ -289,7 +289,7 @@ Output example:
 
 ---
 
-## 🖥️ Output example: 
+## 🖥️ Full Output example: 
 
 
 <img width="468" height="142" alt="image" src="https://github.com/user-attachments/assets/b84860cc-b3fc-4a0a-829d-fb905bc2983e" />
