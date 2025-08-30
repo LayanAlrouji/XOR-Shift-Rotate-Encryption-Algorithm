@@ -142,6 +142,46 @@ public class MessageEncryptor {
 
 ## ⛓️ Phase 4: Apply hash function to achieve integrity.
 
+Code:
+
+
+// Inner HashGenerator class:
+
+
+    public static class HashGenerator {
+        // Generate hash of a given message:
+        public static String generateHash(String message) {
+            try {
+                MessageDigest sha1 = MessageDigest.getInstance("SHA-1");
+                byte[] hashBytes = sha1.digest(message.getBytes());
+                StringBuilder hexString = new StringBuilder();
+                for (byte b : hashBytes) {
+                    String hex = Integer.toHexString(0xff & b);
+                    if (hex.length() == 1) {
+                        hexString.append('0');
+                    }
+                    hexString.append(hex);
+                }
+                return hexString.toString();
+            } catch (NoSuchAlgorithmException e) {
+                throw new RuntimeException("SHA-1 algorithm not found!", e);
+            }
+        }
+    } 
+
+
+
+
+// ---------------------- Main method ------------------------
+
+  // Generate SHA-1 hash of the plaintext:
+
+  
+        String sha1Hash = HashGenerator.generateHash(plaintext);
+        System.out.println("SHA-1 hash of plaintext: " + sha1Hash);
+
+
+
 ---
 
 ## 🔓 Phase 5: Decrypt the cipher text to get the plaintext.
