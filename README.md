@@ -58,6 +58,8 @@ Code:
 
 
 public class MessageEncryptor {
+   
+    
     // 1- Convert PlainText to binary:
     public static String toBinary(String plainText) {
         StringBuilder binaryMessage = new StringBuilder();
