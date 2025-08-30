@@ -27,11 +27,32 @@ Flow chart:
 
 ---
 
-## 🔑 Phase 2: Mention whether will you use the keys or not in your algorithm, and If you will use keys, explain how to generate the keys.
+## 🔑 Phase 2: Mention whether will you use the keys or not in your algorithm, and If you will use keys, explain how to generate the keys, and then display the generated keys.
 
+Yes, 
+The user enters the key as a string directly. 
+This enables users to select their preferred key.
+
+Code:
+        // Input the key:
+        System.out.print("Enter a STRING key: ");
+        String key = scanner.nextLine();
+
+        // Convert the key character to binary
+         char keyChar = key.charAt(i % key.length());
+         String keyBit = String.format("%8s", Integer.toBinaryString(keyChar)).replace(' ', '0');
+         char xoredBit = (binaryMessage.charAt(i) == keyBit.charAt(i % 8)) ? '0' : '1';
+         
+---
+
+## 🖥️ Phase 3: Display the plain text, Encrypt your name, Display the cipher text.
 
 
 ---
 
-## 🖥️ Phase 3: Display the generated keys.
+## ⛓️ Phase 4: Apply hash function to achieve integrity.
+
+---
+
+## 🔓 Phase 5: Decrypt the cipher text to get the plaintext.
 
