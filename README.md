@@ -232,5 +232,13 @@ Code:
         System.out.println("Decrypted message: " + decrypted);
 
 
-  
+
+
+---
+
+## 🖥️ Output example: 
+
+
+<img width="468" height="142" alt="image" src="https://github.com/user-attachments/assets/b84860cc-b3fc-4a0a-829d-fb905bc2983e" />
+
 
