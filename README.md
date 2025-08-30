@@ -295,3 +295,14 @@ Output example:
 <img width="468" height="142" alt="image" src="https://github.com/user-attachments/assets/b84860cc-b3fc-4a0a-829d-fb905bc2983e" />
 
 
+
+
+
+
+
+
+---
+
+## 💬 Final Reflection
+
+During this project, I learned how to implement a custom encryption algorithm combining Shift, XOR, and Rotation. I also applied hashing for data integrity. It was challenging to manage the binary conversions and rotations correctly, but debugging each phase step by step helped me understand the process better. This project improved my Java programming skills and my understanding of basic cryptography concepts.
