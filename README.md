@@ -104,18 +104,31 @@ public class MessageEncryptor {
 // ---------------------- Main method ------------------------
 
    // Input the plaintext message:
+
+   
         System.out.print("Enter a message: ");
         String plaintext = scanner.nextLine();
+
         
    // Input the key:
+
+   
         System.out.print("Enter a STRING key: ");
         String key = scanner.nextLine();
 
+
+
    // Convert plaintext to binary:
+
+   
         String binaryMessage = toBinary(plaintext);
         System.out.println("Binary message: " + binaryMessage);
 
+
+
    // Apply the encryption process (Shift -> XOR -> Rotate):
+
+   
         String shifted = shifting(binaryMessage, 2);
         System.out.println("Shifted message: " + shifted);
 
