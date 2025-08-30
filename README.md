@@ -37,12 +37,17 @@ Code:
 
 
         // Convert the key character to binary
+
+        
          char keyChar = key.charAt(i % key.length());
          String keyBit = String.format("%8s", Integer.toBinaryString(keyChar)).replace(' ', '0');
          char xoredBit = (binaryMessage.charAt(i) == keyBit.charAt(i % 8)) ? '0' : '1';
 
+
+
          
      // ---------------------- Main method ------------------------
+
 
         // Input the key:
         System.out.print("Enter a STRING key: ");
